@@ -1,3 +1,4 @@
+*{padding: 0;margin: 0;}
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(69, 84, 168);
@@ -28,7 +29,7 @@ h1{
     text-align: right;
     height: 40px;
     background-color: white;
-    font-size: 21px;
+    font-size: 16px;
 }
 #buttons{
     margin-top: 5%;
@@ -44,8 +45,24 @@ button{
     font-size: 20px;
 }
 
-#clear{
-    justify-content: space-evenly;
+
+#clearButtons{
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 20px;
+    grid-column-gap: 10px;
+}
+
+
+#clearSymbol, #clear{
     padding: 0;
-    grid-column: 1/4;
+}
+
+h3{
+    text-align: center;
+    height: 30px;
+    width: 100%;
+    background-color: rgb(55, 68, 139);
+    padding: 30px 0;
 }

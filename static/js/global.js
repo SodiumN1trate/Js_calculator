@@ -4,28 +4,27 @@ window.addEventListener('load', () => {
     let equationAreaZone = document.getElementById("equationAreaZone");
     let equalSign = document.getElementById("equalSign");
     let clearButton = document.getElementById("clear");
+    let clearSymbolButton = document.getElementById("clearSymbol");
     let equation = "";
 
 
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
-            //console.log(button.value);
-            /* if (equationAreaZone.length >= 40)
+            if (equation.length >= 60)
             {
                 return;
             }
             else{
                 equationAreaZone.innerHTML += button.value;
                 equation += button.value;
-            } */
-            equationAreaZone.innerHTML += button.value;
-            equation += button.value;
+            } 
         })
     })
 
     equalSign.addEventListener('click', () => {
         try{
             equationAreaZone.innerHTML = eval(equation);
+            equation = eval(equation);
         }
         catch{
             equationAreaZone.innerHTML = "Error";
@@ -38,4 +37,9 @@ window.addEventListener('load', () => {
         equation = "";
     })
 
+    clearSymbolButton.addEventListener('click', () =>{
+        equation = Array.from(equation);
+        equation.pop();
+        equationAreaZone.innerHTML = equation.join("");
+    })
 });
