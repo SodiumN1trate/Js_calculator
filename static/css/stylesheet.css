@@ -1,0 +1,51 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(69, 84, 168);
+}
+
+h1{
+    text-align: center;
+}
+
+#calculator{
+    margin: 3% auto;
+    background-image: linear-gradient(rgb(82, 82, 82), rgb(54, 54, 54));
+    width: 350px;
+    height: 525px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid rgb(145, 145, 145);
+    box-shadow: 3px 3px 4px black;
+}
+
+#equationArea{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-end;
+    word-break: break-all;
+    border: 2px solid black;
+    text-align: right;
+    height: 40px;
+    background-color: white;
+    font-size: 21px;
+}
+#buttons{
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 20px;
+    align-items: center;
+    grid-column-gap: 10px;
+}
+
+button{
+    padding: 20px;
+    font-size: 20px;
+}
+
+#clear{
+    justify-content: space-evenly;
+    padding: 0;
+    grid-column: 1/4;
+}
